@@ -1,0 +1,44 @@
+.navbar {
+  --bs-navbar-padding-y: 2rem;
+  &-brand {
+    width: 136px;
+    @include media-breakpoint-up(lg) {
+      width: 251px;
+    }
+  }
+  &-toggler {
+    border: 0;
+    padding-right: 0;
+    &:focus {
+      box-shadow: none;
+    }
+    &-icon {
+      --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+  &-item {
+    margin-bottom: 8px;
+    margin-top: 8px;
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-left: 25px;
+      margin-right: 25px;
+    }
+  }
+  .nav {
+    &-link {
+      --bs-nav-link-font-weight: 600;
+      --bs-nav-link-color: #04151f;
+    }
+  }
+}
+.offcanvas {
+  &.offcanvas-top {
+    --bs-offcanvas-height: 45vh;
+  }
+}
+header {
+  position: fixed;
+  width: 100%;
+}

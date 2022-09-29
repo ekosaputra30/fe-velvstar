@@ -1,5 +1,6 @@
 @import "bootstrap/bootstrap.scss";
 @import "fonts";
+@import "header";
 
 :root {
   --color-primary: #451257;
@@ -22,6 +23,9 @@ body {
 
 .btn {
   --bs-btn-border-radius: 8px;
+  --bs-btn-padding-x: 2.5rem;
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-border-color: transparent;
 
   font-weight: 500;
 }
