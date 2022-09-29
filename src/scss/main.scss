@@ -1,0 +1,46 @@
+@import "bootstrap/bootstrap.scss";
+@import "fonts";
+
+:root {
+  --color-primary: #451257;
+  --color-primary-hover: #390f49;
+  --color-primary-active: #2e0c3a;
+  --color-primary-focus: rgba(#cc5df4, 0.2);
+  --color-secondary: #3e7cb1;
+  --color-secondary-hover: #1b374f;
+  --color-secondary-active: #1b374f;
+  --color-secondary-focus: rgba(#3e7cb1, 0.2);
+}
+
+html,
+body {
+  background-color: white;
+  color: #04151f;
+  font-family: "Inter";
+  font-size: 16px;
+}
+
+.btn {
+  --bs-btn-border-radius: 8px;
+
+  font-weight: 500;
+}
+
+.btn-primary {
+  --bs-btn-color: white;
+  --bs-btn-bg: var(--color-primary);
+
+  &:hover {
+    --bs-btn-bg: var(--color-primary-hover);
+  }
+
+  &:active {
+    --bs-btn-bg: var(--color-primary-active);
+  }
+
+  &:focus {
+    --bs-btn-bg: var(--color-primary-focus);
+  }
+}
+
+@import "sections/hero";
