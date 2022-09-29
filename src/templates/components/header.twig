@@ -7,16 +7,18 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavbar" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+      <div class="offcanvas offcanvas-top" tabindex="-1" id="mainNavbar" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-end">
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav list-unstyled">
+          <ul class="navbar-nav list-unstyled align-items-center mx-auto">
             {% for nav_item in navigations %}
               <li class="navbar-item"><a href="" class="nav-link">{{ nav_item }}</a></li>
             {% endfor %}
+          </ul>
+          <ul class="navbar-nav align-items-center align-items-lg-end">
+            <li class="navbar-item"><a href="" class="btn btn-primary">Contact Us</a></li>
           </ul>
         </div>
       </div>
