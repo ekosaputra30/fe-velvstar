@@ -22,6 +22,7 @@ var gulp = require("gulp"),
 var paths = {
   build: "./public/",
   sass: "./src/scss/",
+  sassPath: ["./src/scss/*.scss", "./src/scss/**/*.scss"],
   js: "./src/js/",
   css: "./public/dist/css/",
   data: "./src/data/",
@@ -81,7 +82,7 @@ function twigTask() {
 function sassTask() {
   return (
     gulp
-      .src(paths.sass + "main.scss")
+      .src(paths.sassPath)
       .pipe(sourcemaps.init())
       // Stay live and reload on error
       .pipe(
@@ -138,7 +139,7 @@ function jsTask() {
  */
 function watchTask() {
   gulp.watch(paths.js + "script.js", gulp.series(jsTask, reload));
-  gulp.watch(paths.sass + "main.scss", gulp.series(sassTask, reload));
+  gulp.watch(paths.sassPath, gulp.series(sassTask, reload));
   gulp.watch(
     ["./src/templates/**/*.twig", "./src/data/index.json"],
     gulp.series(twigTask, reload)
