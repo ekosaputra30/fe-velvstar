@@ -1,6 +1,14 @@
 node_modules
 public/dist/css/main.css
 public/dist/css/main.css.map
+public/dist/css/bootstrap/bootstrap-grid.css
+public/dist/css/bootstrap/bootstrap-grid.css.map
+public/dist/css/bootstrap/bootstrap-reboot.css
+public/dist/css/bootstrap/bootstrap-reboot.css.map
+public/dist/css/bootstrap/bootstrap-utilities.css
+public/dist/css/bootstrap/bootstrap-utilities.css.map
+public/dist/css/bootstrap/bootstrap.css
+public/dist/css/bootstrap/bootstrap.css.map
 public/dist/js/script.min.js
 public/dist/js/script.min.js.map
 public/index.html
