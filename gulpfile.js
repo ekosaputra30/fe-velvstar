@@ -156,3 +156,5 @@ exports.default = gulp.series(
   gulp.parallel(sassTask, jsTask, twigTask),
   watchTask
 );
+
+exports.build = gulp.series(gulp.parallel(sassTask, jsTask, twigTask));
