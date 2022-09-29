@@ -1,0 +1,9 @@
+.hero {
+  background-color: #fafafb;
+  height: 100vh;
+
+  @include media-breakpoint(lg) {
+    height: auto;
+    min-height: 900px;
+  }
+}

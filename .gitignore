@@ -1,0 +1,6 @@
+node_modules
+public/dist/css/main.css
+public/dist/css/main.css.map
+public/dist/js/script.min.js
+public/dist/js/script.min.js.map
+public/index.html

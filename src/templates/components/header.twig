@@ -1,0 +1,25 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-white bg-light">
+    <div class="container">
+      <a href="" class="navbar-brand">
+        <img src="assets/images/logo-purple.png" alt="Velvstar Logo" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNavbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="mainNavbar" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav list-unstyled">
+            {% for nav_item in navigations %}
+              <li class="navbar-item"><a href="" class="nav-link">{{ nav_item }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
