@@ -53,6 +53,7 @@
     }
 
     .ellipse {
+      border-radius: 40%;
       filter: blur(30px);
       height: 125px;
       left: 50%;
@@ -174,6 +175,7 @@
     }
   }
   .vector {
+    display: none;
     position: absolute;
     &--hero-1 {
       display: none;
@@ -181,10 +183,12 @@
 
     @include media-breakpoint-up(lg) {
       &--hero-2 {
+        display: block;
         bottom: 21%;
         left: 5%;
       }
       &--hero-3 {
+        display: block;
         right: 0%;
         top: 41%;
       }
