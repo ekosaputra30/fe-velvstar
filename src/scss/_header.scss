@@ -1,5 +1,8 @@
 .navbar {
   --bs-navbar-padding-y: 2rem;
+  background-color: transparent !important;
+  transition: background-color 0.3s, padding 0.3s;
+
   &-brand {
     width: 136px;
     @include media-breakpoint-up(lg) {
@@ -41,4 +44,14 @@
 header {
   position: fixed;
   width: 100%;
+  z-index: 1030;
+
+  &.is-shrink {
+    .navbar {
+      --bs-navbar-padding-y: 0rem;
+
+      background-color: white !important;
+      transition: background-color 0.3s, padding 0.3s;
+    }
+  }
 }
