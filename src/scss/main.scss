@@ -1,15 +1,16 @@
 @import "bootstrap/bootstrap.scss";
 @import "fonts";
+@import "header";
 
 :root {
   --color-primary: #451257;
   --color-primary-hover: #390f49;
   --color-primary-active: #2e0c3a;
-  --color-primary-focus: rgba(#cc5df4, 0.2);
+  --color-primary-focus: rgba(204, 93, 244, 0.2);
   --color-secondary: #3e7cb1;
   --color-secondary-hover: #1b374f;
   --color-secondary-active: #1b374f;
-  --color-secondary-focus: rgba(#3e7cb1, 0.2);
+  --color-secondary-focus: rgba(62, 124, 177, 0.2);
 }
 
 html,
@@ -18,12 +19,52 @@ body {
   color: #04151f;
   font-family: "Inter";
   font-size: 16px;
+  overflow-x: hidden;
+  letter-spacing: -0.8%;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 18px;
+    line-height: 1.125rem;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    font-size: 20px;
+    line-height: 1.25rem;
+  }
+}
+
+.section {
+  background-color: white;
+  min-height: 100vh;
+
+  @include media-breakpoint-up(lg) {
+    min-height: 700px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    min-height: 900px;
+  }
 }
 
 .btn {
   --bs-btn-border-radius: 8px;
-
+  --bs-btn-padding-x: 2rem;
+  --bs-btn-padding-y: 0.55rem;
+  --bs-btn-border-color: transparent;
+  --bs-btn-font-size: 14px;
   font-weight: 500;
+
+  &:active,
+  &:focus {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  @include media-breakpoint-up(lg) {
+    --bs-btn-padding-x: 2.5rem;
+    --bs-btn-padding-y: 0.75rem;
+    --bs-btn-font-size: 16px;
+  }
 }
 
 .btn-primary {
@@ -31,15 +72,34 @@ body {
   --bs-btn-bg: var(--color-primary);
 
   &:hover {
-    --bs-btn-bg: var(--color-primary-hover);
+    --bs-btn-hover-bg: var(--color-primary-hover);
+    border-color: transparent;
   }
 
   &:active {
-    --bs-btn-bg: var(--color-primary-active);
+    --bs-btn-active-bg: var(--color-primary-active);
   }
 
   &:focus {
-    --bs-btn-bg: var(--color-primary-focus);
+    --bs-btn-hover-bg: var(--color-primary-focus);
+  }
+}
+
+.btn-outline {
+  --bs-btn-color: #04151f;
+  --bs-btn-border-color: #04151f;
+  --bs-btn-bg: transparent;
+
+  &:hover {
+    --bs-btn-hover-bg: transparent;
+  }
+
+  &:active {
+    --bs-btn-active-bg: transparent;
+  }
+
+  &:focus {
+    --bs-btn-hover-bg: transparent;
   }
 }
 
